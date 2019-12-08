@@ -23,19 +23,20 @@
  $buttonReset.on('click', () => {
 
     // Reset buttons
-    //reset buttons
 
     for (let index = 0; index < allButtonNodeArray.length; index++)
     {
-    allButtonNodeArray[index].className = 'key';
-    allButtonNodeArray[index].disabled = false;
-        
+        allButtonNodeArray[index].className = 'key';
+        allButtonNodeArray[index].disabled = false;
     }
+
+    // Reset the game
 
     game.gameReset();
 
+    // Start game
+
     game.startGame();
-    console.log(`Active Phrase - phrase: ${game.activePhrase.phrase}`);
     
  });
 
