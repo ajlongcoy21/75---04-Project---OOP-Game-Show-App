@@ -116,7 +116,7 @@ class Phrase{
         else 
         {
             // if found show the letters on the phrase area and return true
-            this.showMatchedLetter(letter);
+            //this.showMatchedLetter(letter);
             return true;
         }
 

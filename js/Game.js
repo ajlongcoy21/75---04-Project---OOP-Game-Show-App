@@ -2,7 +2,8 @@
  * Project 4 - OOP Game App
  * Game.js */
 
-class Game{
+class Game
+{
 
     /**************************************************************************
      * Constructor
@@ -162,6 +163,8 @@ class Game{
         {
             // show the user the letter is a good selection 
 
+            this.activePhrase.showMatchedLetter(button.innerText);
+
             button.className = 'chosen';
             button.classList.add('animated', 'flip');
 
@@ -227,6 +230,8 @@ class Game{
                     if (this.activePhrase.checkLetter(keypress)) 
                     {
                         // show the user the letter is a good selection
+
+                        this.activePhrase.showMatchedLetter(keypress);
 
                         allButtonNodeArray[index].className = 'chosen';
                         allButtonNodeArray[index].classList.add('animated', 'flip');
