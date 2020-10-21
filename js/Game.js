@@ -364,7 +364,7 @@ class Game
             allButtonNodeArray[index].classList.remove('animated', 'shake');
             allButtonNodeArray[index].classList.remove('animated', 'flip');
             allButtonNodeArray[index].disabled = true;
-            
+            allButtonNodeArray[index].style.display = "none";
         }
 
         // get the overlay display and header for user message
@@ -417,6 +417,14 @@ class Game
         for (let index = 0; index < allLIWithTriesClassArray.length; index++) 
         {
             allLIWithTriesClassArray[index].firstChild.src = "images/liveHeart.png";
+        }
+
+        // disable buttons so the user cannot select and see on the end screen
+
+        for (let index = 0; index < allButtonNodeArray.length; index++)
+        {
+            // show buttons again
+            allButtonNodeArray[index].style.display = "";
         }
 
         // reset missed
